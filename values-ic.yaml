@@ -1,0 +1,6 @@
+controller:
+  # Number of pod replicas for ingress-controller
+  replicaCount: 2
+  service:
+    # Set static IP for the ingress-controller loadbalancer
+    loadBalancerIP: 20.219.79.200

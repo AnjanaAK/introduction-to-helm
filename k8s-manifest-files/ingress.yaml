@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: aspnetapp
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: aspnetapp.timedrive.online
+      http:
+        paths:
+          - pathType: Prefix
+            path: /          
+            backend:
+              service:
+                name: aspnetapp
+                port:
+                  number: 80
