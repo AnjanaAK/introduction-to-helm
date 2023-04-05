@@ -118,9 +118,14 @@ Some other flags that can be used with `helm install` :
 Create a helm chart:
 
      helm create aspnetapp
+     
+     
+Examine a helm chart for possible issues:
+
+     helm lint ./aspnetapp
 
 
-Check the rendered yaml file of a helm chart:
+Render the helm chart templates locally and save it to a yaml file: 
 
     helm template aspnetapp --debug > test.yaml
 
